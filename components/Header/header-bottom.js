@@ -32,7 +32,7 @@ export default function HeaderBottom() {
           </Link>
           <div className={classes["header-right"]}>
             {bottomSocials.map(({ src, alt }) => (
-              <Image src={src} alt={alt} width={32} height={32} />
+              <Image key={alt} src={src} alt={alt} width={32} height={32} />
             ))}
           </div>
         </div>
