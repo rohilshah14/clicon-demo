@@ -1,3 +1,10 @@
+import BannerSlider from "../components/Banner/banner";
+
 export default function HomePage() {
-  return <h1>This is Home Page</h1>;
+  return (
+    <>
+      <BannerSlider />
+      <h1>This is Home Page</h1>
+    </>
+  );
 }

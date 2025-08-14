@@ -10,6 +10,10 @@
   --grey-color: #475156;
   --bg-color: #1b6392;
   --yellow-color: #efd33d;
+  --light-grey-color: #f2f4f5;
+  --error-color: #ff0000;
+  --orange-color: #fa8232;
+  --blue-color: #2da5f3;
 }
 
 html {
@@ -42,7 +46,7 @@ body {
   width: 100%;
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 a {
@@ -113,9 +117,6 @@ input[type="search"] {
   -moz-appearance: none;
   appearance: none;
 }
-h1 {
-  padding: 500px 100px !important;
-}
 h1,
 h2,
 h3,
@@ -130,6 +131,32 @@ p {
   color: var(--grey-color);
 }
 
+h1,
+.h1 {
+  font-size: 56px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+h3,
+.h3 {
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--secondary-color);
+  font-family: var(--primary-font-family);
+  text-align: center;
+}
+h4,
+.h4 {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--white-color);
+  font-family: var(--primary-font-family);
+  text-align: center;
+}
+
 p {
   font-family: var(--primary-font-family);
   line-height: 1.4;
@@ -137,8 +164,59 @@ p {
   color: var(--white-color);
 }
 
+.btn {
+  min-width: 191px;
+  padding: 12px 32px;
+  background-color: var(--orange-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--white-color);
+  text-transform: uppercase;
+  line-height: 1.3;
+  letter-spacing: 1.2%;
+}
+.btn:hover {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}
 .container {
   max-width: 1350px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.not-found-wrap {
+  padding: 224px 0 120px;
+}
+.not-found {
+  text-align: center;
+}
+.not-found-content {
+  padding-top: 68px;
+  max-width: 536px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.not-found-content p {
+  color: var(--grey-color);
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .not-found-content {
+    padding-top: 52px;
+    gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .not-found-content {
+    padding-top: 40px;
+    max-width: 100%;
+    gap: 16px;
+  }
 }
