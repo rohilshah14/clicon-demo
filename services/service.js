@@ -1,4 +1,5 @@
 import config from "../config/config";
+import PRODUCT_FEATURE from "../product-feature";
 
 export async function getProducts() {
   try {
@@ -9,4 +10,8 @@ export async function getProducts() {
     console.error("Error fetching products", error);
     return [];
   }
+}
+
+export async function getProductFeature() {
+  return PRODUCT_FEATURE;
 }
