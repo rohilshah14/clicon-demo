@@ -1,0 +1,27 @@
+.features {
+  padding: 24px 0 40px;
+}
+.features ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+.features ul li {
+  padding: 18px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.features ul li p {
+  color: var(--primary-color);
+}
+.features ul li p:first-child {
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  padding-bottom: 5px;
+}
