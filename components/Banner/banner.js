@@ -53,7 +53,7 @@ export default function BannerSlider() {
                     <h1>{product.title}</h1>
                     <p>{product.description}</p>
                     <div className="cta">
-                      <Link href="/" className="btn">
+                      <Link href={`/products/${product.id}`} className="btn">
                         Shop now
                         <Image
                           alt="arrow-img"

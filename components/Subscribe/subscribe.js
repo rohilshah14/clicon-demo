@@ -1,5 +1,35 @@
 import classes from "./subscribe.module.css";
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Subscribe() {
+  const socials = [
+    {
+      href: "https://www.google.com",
+      src: "/images/google.svg",
+      alt: "Google",
+    },
+    {
+      href: "https://www.amazon.com",
+      src: "/images/amazon.svg",
+      alt: "Amazon",
+    },
+    {
+      href: "https://www.philips.com",
+      src: "/images/philips.svg",
+      alt: "Philips",
+    },
+    {
+      href: "https://www.toshiba.com",
+      src: "/images/toshiba.svg",
+      alt: "Toshiba",
+    },
+    {
+      href: "https://www.samsung.com",
+      src: "/images/samsung.svg",
+      alt: "Samsung",
+    },
+  ];
   return (
     <div className={classes["subscribe-wrap"]}>
       <div className="container">
@@ -9,6 +39,14 @@ export default function Subscribe() {
             Praesent fringilla erat a lacinia egestas. Donec vehicula tempor
             libero et cursus. Donec non quam urna. Quisque vitae porta ipsum.
           </p>
+
+          <div className="logos">
+            {socials.map(({ href, alt, src }) => (
+              <Link href={href} key={alt}>
+                <Image src={src} alt={alt} width={20} height={20} />
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </div>
