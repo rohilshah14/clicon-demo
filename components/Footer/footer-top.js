@@ -40,6 +40,12 @@ export default function FooterTop() {
                 <li>
                   <Link href="/about">About Us</Link>
                 </li>
+                <li>
+                  <Link href="/products">Shop</Link>
+                </li>
+                <li>
+                  <Link href="/404">404</Link>
+                </li>
               </ul>
             </div>
           </div>
