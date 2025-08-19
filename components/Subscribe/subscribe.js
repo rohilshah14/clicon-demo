@@ -40,10 +40,10 @@ export default function Subscribe() {
             libero et cursus. Donec non quam urna. Quisque vitae porta ipsum.
           </p>
 
-          <div className="logos">
+          <div className={classes.logos}>
             {socials.map(({ href, alt, src }) => (
               <Link href={href} key={alt}>
-                <Image src={src} alt={alt} width={20} height={20} />
+                <Image src={src} alt={alt} width={72} height={72} />
               </Link>
             ))}
           </div>
