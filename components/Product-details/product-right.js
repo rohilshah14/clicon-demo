@@ -15,7 +15,7 @@ export default function ProductRight(props) {
       <ProductPrice {...props} />
 
       <div className="cta">
-        <Link href="/" className="btn">
+        <Link href="/" className="btn" style={{ display: "flex" }}>
           Add to card
           <Image
             src="/images/ShoppingCartSimple.svg"

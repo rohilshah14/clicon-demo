@@ -42,23 +42,51 @@
   line-height: 1.2;
   color: var(--blue-color);
   font-weight: 500;
+  padding-bottom: 10px;
 }
+
 a:hover .discount {
   color: var(--secondary-color);
 }
+
 .cta {
   text-align: center;
   margin-top: 40px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1400px) {
+  .list {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
   .item {
     width: 50%;
+  }
+  .list {
+    padding-top: 40px;
+  }
+  .product {
+    padding: 42px 0;
+  }
+  .content {
+    padding: 15px 24px;
   }
 }
 
 @media (max-width: 767px) {
   .item {
     width: 100%;
+  }
+  .list {
+    padding-top: 32px;
+    margin: 0;
+  }
+  .product {
+    padding: 32px 0;
+  }
+  .content {
+    padding: 12px 20px;
   }
 }

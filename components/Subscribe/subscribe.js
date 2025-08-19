@@ -42,7 +42,7 @@ export default function Subscribe() {
 
           <div className={classes.logos}>
             {socials.map(({ href, alt, src }) => (
-              <Link href={href} key={alt}>
+              <Link href={href} key={alt} target="_blank">
                 <Image src={src} alt={alt} width={72} height={72} />
               </Link>
             ))}

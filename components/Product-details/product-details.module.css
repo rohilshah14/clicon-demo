@@ -75,7 +75,6 @@
   padding: 28px;
   background-color: var(--light-grey-color);
 }
-
 .header ul li a {
   display: flex;
   gap: 8px;
@@ -101,7 +100,6 @@
   align-items: center;
   letter-spacing: 1.1px;
 }
-
 .header ul li:not(:last-child)::after {
   content: "";
   display: inline-block;
@@ -112,10 +110,81 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
-
 .header ul li a:hover {
   color: var(--orange-color);
 }
+.tabs {
+  border: 1px solid #e4e7e9;
+  margin-top: 60px;
+}
+.tabs ul {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e4e7e9;
+}
+.tabs ul li {
+  padding: 18px 20px;
+  cursor: pointer;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+.tabs ul li.active {
+  border-bottom: 1px solid var(--orange-color);
+  color: var(--orange-color);
+  font-weight: 600;
+}
+.tabContent {
+  padding: 40px;
+}
+.qrImg {
+  border: 2px solid #e4e7e9;
+  display: flex;
+  margin: 0 auto;
+}
+.bigText {
+  align-items: center;
+  border-radius: 50%;
+  color: var(--black-color);
+  display: flex;
+  font-size: 40px;
+  height: 250px;
+  border: 20px solid #f44336;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  width: 250px;
+  margin: 0 auto;
+}
+.reviewMain p {
+  color: #5f6c72;
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.main ul {
+  flex-shrink: 1;
+  flex-basis: calc(50% - 30px);
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #e4e7e9;
+  box-sizing: border-box;
+}
+.main ul li {
+  font-weight: 600;
+  padding: 0;
+}
+.main ul li span {
+  color: var(--blue-color);
+}
+
 @media (max-width: 1024px) {
   .header {
     padding: 24px;
@@ -133,9 +202,21 @@
     width: 60%;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .header {
     padding: 20px;
+  }
+  .tabContent {
+    padding: 34px;
+  }
+  .main {
+    gap: 22px;
+  }
+  .tabs ul {
+    gap: 14px;
+  }
+  .tabs ul li {
+    font-size: 14px;
   }
 }
 @media (max-width: 767px) {
@@ -157,5 +238,17 @@
   }
   .right {
     width: 100%;
+  }
+  .tabContent {
+    padding: 28px;
+  }
+  .main {
+    gap: 16px;
+  }
+  .main ul {
+    flex-basis: 100%;
+  }
+  .tabs {
+    margin-top: 40px;
   }
 }

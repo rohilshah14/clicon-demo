@@ -51,7 +51,7 @@ export default function HeaderTop() {
               <p>Follow us:</p>
               <div className={classes["header-follow"]}>
                 {socials.map(({ href, alt, src }) => (
-                  <Link href={href} key={alt}>
+                  <Link href={href} key={alt} target="_blank">
                     <Image src={src} alt={alt} width={20} height={20} />
                   </Link>
                 ))}
