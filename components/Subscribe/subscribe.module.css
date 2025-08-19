@@ -10,3 +10,10 @@
   text-align: center;
   padding-top: 10px;
 }
+.logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  padding-top: 32px;
+}
