@@ -9,9 +9,11 @@ export default function ProductContent(props) {
         Availabiliy:{" "}
         <span className={classes.green}>{props.availabilityStatus}</span>
       </li>
-      <li>
-        Brand: <span>{props.brand}</span>
-      </li>
+      {props.branch && props.branch > 0 && (
+        <li>
+          Brand: <span>{props.brand}</span>
+        </li>
+      )}
       <li>
         Category:: <span>{props.category}</span>
       </li>

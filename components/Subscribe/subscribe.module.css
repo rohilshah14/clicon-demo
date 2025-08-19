@@ -17,3 +17,34 @@
   gap: 48px;
   padding-top: 32px;
 }
+
+@media (max-width: 1200px) {
+  .subscribe-wrap {
+    padding: 72px 0;
+  }
+}
+@media (max-width: 991px) {
+  .subscribe-wrap {
+    padding: 64px 0;
+  }
+  .logos {
+    gap: 40px;
+    padding-top: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .subscribe-wrap {
+    padding: 50px 0;
+  }
+  .logos {
+    gap: 0;
+    padding-top: 12px;
+  }
+  .logos a {
+    width: 50%;
+    text-align: center;
+  }
+  .subscribe {
+  max-width: 100%;
+  }
+}

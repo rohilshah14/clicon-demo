@@ -41,7 +41,6 @@ export default function ProductPage() {
           <div className="loader"></div>
         </div>
       )}
-
       <div className="product-wrap">
         <ProductList items={products} onClick={hasMore ? loadMore : null} />
         <div>
