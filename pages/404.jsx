@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Button from "../components/UI/button";
 
 export default function NotFoundPage() {
   return (
@@ -18,17 +19,13 @@ export default function NotFoundPage() {
               Something went wrong. It’s look that your requested could not be
               found. It’s look like the link is broken or the page is removed.
             </p>
-            <div className="cta">
-              <Link href="/" className="btn">
-                <Image
-                  width={20}
-                  height={20}
-                  alt="g0-back"
-                  src="/images/ArrowLeft.svg"
-                />
-                Go Back
-              </Link>
-            </div>
+            <Button
+              name="Go Back"
+              left={true}
+              right={false}
+              cart={false}
+              href="/"
+            />
           </div>
         </div>
       </div>

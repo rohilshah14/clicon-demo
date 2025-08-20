@@ -1,8 +1,7 @@
 import ProductContent from "./product-content.jsx";
 import classes from "./product-details.module.css";
 import ProductPrice from "./product-price.jsx";
-import Link from "next/link";
-import Image from "next/image";
+import Button from "../UI/button.jsx";
 
 export default function ProductRight(props) {
   return (
@@ -14,17 +13,14 @@ export default function ProductRight(props) {
       <ProductContent {...props} />
       <ProductPrice {...props} />
 
-      <div className="cta">
-        <Link href="/" className="btn" style={{ display: "flex" }}>
-          Add to card
-          <Image
-            src="/images/ShoppingCartSimple.svg"
-            width={24}
-            height={24}
-            alt="add-to-cart"
-          />
-        </Link>
-      </div>
+      <Button
+        name="Add to cart"
+        left={false}
+        right={false}
+        cart={true}
+        href="/products"
+        style={{ display: "flex" }}
+      />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import { getProducts } from "../../services/service.jsx";
 import classes from "./banner.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Link from "next/link";
+import Button from "../UI/button.jsx";
 
 export default function BannerSlider() {
   const [products, setProducts] = useState([]);
@@ -52,17 +52,13 @@ export default function BannerSlider() {
                     </div>
                     <h1>{product.title}</h1>
                     <p>{product.description}</p>
-                    <div className="cta">
-                      <Link href={`/products/${product.id}`} className="btn">
-                        Shop now
-                        <Image
-                          alt="arrow-img"
-                          width={24}
-                          height={24}
-                          src="/images/ArrowRight.svg"
-                        />
-                      </Link>
-                    </div>
+                    <Button
+                      name="Shop Now"
+                      left={false}
+                      right={true}
+                      cart={false}
+                      href="/products"
+                    />
                   </div>
                   <div className={classes.right}>
                     <Image

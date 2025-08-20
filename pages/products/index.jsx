@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
-import ProductList from "../../components/Product/product-list.jsx";
+import { useState } from "react";
+import { useRouter } from "next/router";
+import ProductList from "../../components/Product/product-list";
 import SeoHead from "../../components/SeoHead.jsx";
-import { getProductLimit } from "../../services/service.jsx";
+import { getProductLimit, getCategories } from "../../services/service.jsx";
+import ProductSearch from "../../components/Product/product-search.jsx";
 
-export default function ProductPage() {
-  const [products, setProducts] = useState([]);
-  const [skip, setSkip] = useState(0);
+export default function ProductPage({ productList, categoryList }) {
+  const [products, setProducts] = useState(productList || []);
+  const [skip, setSkip] = useState(productList?.length || 0);
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
 
-  useEffect(() => {
-    loadMore();
-  }, []);
+  const router = useRouter();
 
   const loadMore = async () => {
     if (loading || !hasMore) return;
@@ -21,7 +21,8 @@ export default function ProductPage() {
       skip,
       select: "id,title,price,description,discountPercentage,images",
     });
-    if (newProducts.length === 0) {
+
+    if (!newProducts || newProducts.length === 0) {
       setHasMore(false);
     } else {
       setProducts((prev) => [...prev, ...newProducts]);
@@ -30,11 +31,16 @@ export default function ProductPage() {
     setLoading(false);
   };
 
+  const findCategoryHandler = (category) => {
+    const fullPath = `/products/${category}`;
+    router.push(fullPath);
+  };
+
   return (
     <>
       <SeoHead
         title="Products"
-        description="Browse a wide variety of products on Clicon. Discover the latest deals and top-rated items."
+        description="Browse a wide variety of products"
       />
       {loading && (
         <div className="loaderWrapper">
@@ -42,6 +48,10 @@ export default function ProductPage() {
         </div>
       )}
       <div className="product-wrap">
+        <ProductSearch
+          categoryList={categoryList}
+          onSearch={findCategoryHandler}
+        />
         <ProductList items={products} onClick={hasMore ? loadMore : null} />
         <div>
           {loading && <p className="loader"></p>}
@@ -50,4 +60,21 @@ export default function ProductPage() {
       </div>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const productList = await getProductLimit({
+    limit: 12,
+    skip: 0,
+    select: "id,title,price,description,discountPercentage,images",
+  });
+
+  const categoryList = await getCategories();
+
+  return {
+    props: {
+      productList: productList || [],
+      categoryList: categoryList || [],
+    },
+  };
 }

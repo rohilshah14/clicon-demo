@@ -3,7 +3,7 @@ import TabContent from "./product-tab-content.jsx";
 import classes from "./product-details.module.css";
 
 export default function ProductTabs({ product }) {
-  const [activeTab, setActiveTab] = useState("reviews");
+  const [activeTab, setActiveTab] = useState("info");
 
   return (
     <div className={classes.tabs}>

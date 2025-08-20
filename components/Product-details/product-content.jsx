@@ -18,6 +18,9 @@ export default function ProductContent(props) {
         Category:: <span>{props.category}</span>
       </li>
       <li>
+        Stock:: <span>{props.stock}</span>
+      </li>
+      <li>
         Weight: <span>{props.weight}</span>
       </li>
       {props.tags && props.tags.length > 0 && (

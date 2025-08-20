@@ -17,6 +17,20 @@ export async function getProducts() {
   }
 }
 
+export async function getCategories() {
+  try {
+    const res = await fetch(`${config.Api.product_uri}/category-list`);
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    const data = await res.json();
+    return Array.isArray(data) ? data : [];
+  } catch (error) {
+    console.error("Error fetching product categories", error);
+    return [];
+  }
+}
+
 export async function getProductLimit({
   limit = 10,
   skip = 0,
