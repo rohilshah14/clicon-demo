@@ -4,8 +4,66 @@ import classes from "./product-details.module.css";
 export default function TabContent({ activeTab, product }) {
   if (activeTab === "info") {
     return (
-      <div>
-        <p>{product.sku}</p>
+      <div className={classes.infoMain}>
+        <div className={classes.headerTab}>
+          <h2 className="h4">{product.title}</h2>
+          <div className={classes.finalPrice}>${product.price}</div>
+        </div>
+        <p>
+          <span>Description: </span>
+          {product.description}
+        </p>
+        <ul>
+          <li>
+            <span>Category: </span>
+            {product.category}
+          </li>
+          <li>
+            <span>Discount: </span>
+            {product.discountPercentage}
+          </li>
+          <li>
+            <span>stock: </span>
+            {product.stock}
+          </li>
+          {product.tags && product.tags.length > 0 && (
+            <li>
+              <span>Tags:</span> {product.tags.join(", ")}
+            </li>
+          )}
+          <li>
+            <span>Sku: </span>
+            {product.sku}
+          </li>
+          <li>
+            <span>Brand: </span>
+            {product.brand}
+          </li>
+          <li>
+            <span>Weight: </span>
+            {product.weight}
+          </li>
+          <li>
+            <span>Warranty Information: </span>
+            {product.warrantyInformation}
+          </li>
+          <li>
+            <span>Shipping Information: </span>
+            {product.shippingInformation}
+          </li>
+          <li>
+            <span>Availability Status: </span>
+            {product.availabilityStatus}
+          </li>
+          <li>
+            <span>Minimum Quantity: </span>
+            {product.minimumOrderQuantity}
+          </li>
+          <li>
+            <span>Return Policy </span>
+            {product.returnPolicy}
+          </li>
+        </ul>
       </div>
     );
   }

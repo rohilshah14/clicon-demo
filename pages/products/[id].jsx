@@ -2,14 +2,15 @@ import { useRouter } from "next/router";
 import SeoHead from "../../components/SeoHead.jsx";
 import { getProductById } from "../../services/service.jsx";
 import ProductDetail from "../../components/Product-details/product-details.jsx";
+import NoProduct from "../../components/UI/no-product.jsx";
 
 export default function Details({ product }) {
   const router = useRouter();
   if (router.isFallback) {
-    return <p>Loading...</p>;
+    return <p className="loader"></p>;
   }
   if (!product) {
-    return <p>Product not found.</p>;
+    return <NoProduct />;
   }
 
   return (

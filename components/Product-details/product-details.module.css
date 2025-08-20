@@ -36,6 +36,7 @@
 .list li span {
   font-weight: 600;
   color: var(--secondary-color);
+  text-transform: capitalize;
 }
 .list li span.green {
   color: #2db224;
@@ -153,7 +154,7 @@
   display: flex;
   font-size: 40px;
   height: 250px;
-  border: 20px solid #f44336;
+  border: 20px solid var(--blue-color);
   justify-content: center;
   padding: 10px;
   text-align: center;
@@ -177,12 +178,44 @@
   border: 1px solid #e4e7e9;
   box-sizing: border-box;
 }
-.main ul li {
+.main ul li,
+.infoMain ul li {
   font-weight: 600;
   padding: 0;
 }
-.main ul li span {
+.main ul li span,
+.infoMain ul li span {
   color: var(--blue-color);
+}
+.infoMain ul li {
+  width: 50%;
+  text-transform: capitalize;
+}
+.infoMain ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  row-gap: 30px;
+  border: 0;
+  padding-top: 20px;
+}
+.headerTab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.infoMain p {
+  padding: 20px 0;
+  color: var(--primary-color);
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #e4e7e9;
+}
+.infoMain h2 {
+  color: var(--black-color);
+  text-align: left;
 }
 
 @media (max-width: 1024px) {
@@ -217,6 +250,9 @@
   }
   .tabs ul li {
     font-size: 14px;
+  }
+  .infoMain ul li {
+    width: 100%;
   }
 }
 @media (max-width: 767px) {

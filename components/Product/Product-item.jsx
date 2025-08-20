@@ -1,6 +1,7 @@
 import classes from "./product.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "../UI/button";
 
 export default function ProductItem(props) {
   const { title, image, id, description, price, discountPercentage } = props;
@@ -20,17 +21,14 @@ export default function ProductItem(props) {
           <p>{description}</p>
           <div className={classes.price}>${price}</div>
           <div className={classes.discount}> {discountPercentage}% OFF</div>
-          <div className="cta">
-            <Link href="/" className="btn" style={{ display: "flex" }}>
-              Add to card
-              <Image
-                src="/images/ShoppingCartSimple.svg"
-                width={24}
-                height={24}
-                alt="add-to-cart"
-              />
-            </Link>
-          </div>
+          <Button
+            name="add to cart"
+            left={false}
+            right={false}
+            cart={true}
+            href="/products"
+            style={{ display: "flex" }}
+          />
         </div>
       </div>
     </li>
