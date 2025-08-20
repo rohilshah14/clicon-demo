@@ -1,5 +1,5 @@
-import FooterBottom from "./footer-bottom";
-import FooterTop from "./footer-top";
+import FooterBottom from "./footer-bottom.jsx";
+import FooterTop from "./footer-top.jsx";
 import classes from "./footer.module.css"
 
 export default function Footer() {

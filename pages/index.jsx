@@ -1,8 +1,8 @@
-import BannerSlider from "../components/Banner/banner";
-import ProductFeatureList from "../components/ProductFeature/product-feature-list";
-import ProductList from "../components/Product/product-list";
-import SeoHead from "../components/SeoHead";
-import { getProductLimit, getProductFeature } from "../services/service";
+import BannerSlider from "../components/Banner/banner.jsx";
+import ProductFeatureList from "../components/ProductFeature/product-feature-list.jsx";
+import ProductList from "../components/Product/product-list.jsx";
+import SeoHead from "../components/SeoHead.jsx";
+import { getProductLimit, getProductFeature } from "../services/service.jsx";
 
 export default function HomePage(props) {
   const { productList, features } = props;

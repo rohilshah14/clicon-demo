@@ -1,6 +1,6 @@
 import classes from "./main-header.module.css";
-import HeaderTop from "./header-top";
-import HeaderBottom from "./header-bottom";
+import HeaderTop from "./header-top.jsx";
+import HeaderBottom from "./header-bottom.jsx";
 import { useEffect, useState } from "react";
 
 export default function MainHeader() {
