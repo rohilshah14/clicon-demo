@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import ProductList from "../../components/Product/product-list";
-import SeoHead from "../../components/SeoHead";
-import { getProductLimit } from "../../services/service";
+import ProductList from "../../components/Product/product-list.jsx";
+import SeoHead from "../../components/SeoHead.jsx";
+import { getProductLimit } from "../../services/service.jsx";
 
 export default function ProductPage() {
   const [products, setProducts] = useState([]);

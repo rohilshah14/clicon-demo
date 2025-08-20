@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TabContent from "./product-tab-content";
+import TabContent from "./product-tab-content.jsx";
 import classes from "./product-details.module.css";
 
 export default function ProductTabs({ product }) {

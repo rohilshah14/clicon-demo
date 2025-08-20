@@ -1,5 +1,5 @@
-import config from "../config/config";
-import PRODUCT_FEATURE from "../product-feature";
+import config from "../config/config.jsx";
+import PRODUCT_FEATURE from "../product-feature.jsx";
 
 export async function getProducts() {
   try {

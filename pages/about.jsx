@@ -1,4 +1,4 @@
-import SeoHead from "../components/SeoHead";
+import SeoHead from "../components/SeoHead.jsx";
 
 export default function AboutPage() {
   return (

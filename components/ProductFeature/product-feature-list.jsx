@@ -1,4 +1,4 @@
-import ProductFeatureItem from "./product-feature-item";
+import ProductFeatureItem from "./product-feature-item.jsx";
 import classes from "./product-feature.module.css"
 export default function ProductFeatureList(props) {
   const { items } = props;

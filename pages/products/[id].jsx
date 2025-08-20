@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import SeoHead from "../../components/SeoHead";
-import { getProductById } from "../../services/service";
-import ProductDetail from "../../components/Product-details/product-details";
+import SeoHead from "../../components/SeoHead.jsx";
+import { getProductById } from "../../services/service.jsx";
+import ProductDetail from "../../components/Product-details/product-details.jsx";
 
 export default function Details({ product }) {
   const router = useRouter();

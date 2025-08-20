@@ -1,6 +1,6 @@
-import ProductContent from "./product-content";
+import ProductContent from "./product-content.jsx";
 import classes from "./product-details.module.css";
-import ProductPrice from "./product-price";
+import ProductPrice from "./product-price.jsx";
 import Link from "next/link";
 import Image from "next/image";
 

@@ -1,8 +1,8 @@
-import ProductTabs from "./product-tab";
+import ProductTabs from "./product-tab.jsx";
 import ProductDetailHeader from "./product-details-header";
 import classes from "./product-details.module.css";
-import ProductLeft from "./product-left";
-import ProductRight from "./product-right";
+import ProductLeft from "./product-left.jsx";
+import ProductRight from "./product-right.jsx";
 
 export default function ProductDetail({ product }) {
   return (

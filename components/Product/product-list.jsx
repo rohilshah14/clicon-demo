@@ -1,4 +1,4 @@
-import ProductItem from "./Product-item";
+import ProductItem from "./Product-item.jsx";
 import classes from "./product.module.css";
 import Link from "next/link";
 

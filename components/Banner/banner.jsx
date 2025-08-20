@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-import BannerSlick from "../../config/slider";
-import { getProducts } from "../../services/service";
+import BannerSlick from "../../config/slider.jsx";
+import { getProducts } from "../../services/service.jsx";
 import classes from "./banner.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
